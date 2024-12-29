@@ -1,27 +1,15 @@
 package main;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import view.MainInterface;
 
-public class Main extends Application {
-    @Override
-    public void start(Stage primaryStage) {
-        try {
-            // Load the main view
-            Parent root = FXMLLoader.load(getClass().getResource("/views/MainView.fxml"));
-            Scene scene = new Scene(root);
-            primaryStage.setTitle("Gestion des Emplois du Temps");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+import javax.swing.*;
 
+public class Main {
     public static void main(String[] args) {
-        launch(args);
+        // Launch the application in the Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+            MainInterface mainInterface = new MainInterface();
+            mainInterface.setVisible(true);
+        });
     }
 }
