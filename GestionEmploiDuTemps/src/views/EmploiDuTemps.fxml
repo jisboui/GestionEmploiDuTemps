@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Alert?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="10">
+    <ComboBox fx:id="cbClasse" promptText="Sélectionner une classe" />
+    <ComboBox fx:id="cbMatiere" promptText="Sélectionner une matière" />
+    <Button text="Chercher" onAction="#chercherSeances"/>
+    
+    <TableView fx:id="tableSeances">
+        <columns>
+            <TableColumn fx:id="colHoraire" text="Horaire" />
+            <TableColumn fx:id="colEnseignant" text="Enseignant" />
+        </columns>
+    </TableView>
+</VBox>
