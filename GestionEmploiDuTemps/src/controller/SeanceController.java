@@ -20,7 +20,7 @@ public class SeanceController {
     }
 
     public boolean supprimerSeance(int id) throws SQLException {
-        String query = "DELETE FROM seances WHERE id = ?";
+        String query = "DELETE FROM seance WHERE id = ?";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);
